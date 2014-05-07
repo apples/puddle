@@ -84,13 +84,17 @@ and provides a significant performance boost.
 
 For example:
 
-    struct Widget {/* ... */};
-    
-    std::list<Widget, Puddle::Allocator<Widget>> widgets;
+```C++
+struct Widget {/* ... */};
+
+std::list<Widget, Puddle::Allocator<Widget>> widgets;
+```
 
 A generic alias:
 
-    template <typename T>
-    using fast_list = std::list<T, Puddle::Allocator<T>>;
-    
-    fast_list<Widget> widgets;
+```C++
+template <typename T>
+using fast_list = std::list<T, Puddle::Allocator<T>>;
+
+fast_list<Widget> widgets;
+```
